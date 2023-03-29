@@ -6,7 +6,8 @@ services:
     restart: always
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_PASSWORD: postgres@2023!
+      POSTGRES_DB: pontuaweb
     volumes:
       - postgres-data:/var/lib/postgresql/data
     ports:
@@ -17,8 +18,8 @@ services:
     restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: MongoDB2023!
-      MONGO_INITDB_DATABASE: pontuaweb
+      MONGO_INITDB_ROOT_PASSWORD: mongo@2023!
+      MONGO_INITDB_DATABASE: db-pontuaweb
     volumes:
       - mongodb-data:/data/db
     ports:
@@ -26,6 +27,4 @@ services:
 
 volumes:
   postgres-data:
-    driver: local
   mongodb-data:
-    driver: local
